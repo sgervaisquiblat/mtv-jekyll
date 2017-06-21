@@ -24,7 +24,7 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: zetsu
+theme: minima
 gems:
   - jekyll-feed
   - jekyll-textile-converter
