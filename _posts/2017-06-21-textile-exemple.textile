@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Textile Exemple"
+date:   2017-06-21
+categories: 
+author: "sgquiblat"
+---
+
+h1. James Bond
+
+h2=. 007
+
+h3>. GoldenEye
+
+p. "What? No small-talk? No chit-chat? That's the trouble with the world these days. Nobody takes the time to do a real sinister interrogation. It's a lost art." - **Movie** __GoldenEye__ (1995)
+
+bc.. dryMartini(){
+    
+    pour( 'Gordon', 3 )
+    pour( 'Vodka', 1 )
+    pour( 'Kina Lillet', 0.5 )
+    
+    shake()
+    
+    add( 'lemon' )
+}
+
+p. 
+
+"Movie plot":http://www.imdb.com/title/tt0113189/
+
+h4. Actors
+
+* Pierce Brosnan
+* Sean Bean
+* Izabella Scorupco
+
+!https://www.mi6-hq.com/sections/movies/dvdcovers/xge.jpg.pagespeed.ic.q5t8o9giwV.jpg(Movie poster)!
