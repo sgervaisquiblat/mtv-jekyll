@@ -1,9 +1,7 @@
 ---
 layout: post
 title:  "Textile Exemple"
-date:   2017-06-21
-categories: 
-author: "sgquiblat"
+permalink: /Textile
 ---
 
 h1. James Bond
