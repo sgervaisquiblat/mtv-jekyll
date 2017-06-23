@@ -1,0 +1,69 @@
+---
+layout: default
+title: "Table & Data"
+permalink: /table
+---
+
+h1. Getting started
+
+p. Here's different ways of showing data in a table
+
+#1 By including an html table
+
+{% include table.html %}
+
+<br/>
+
+#2 By using Textile 
+
+|_{color: #506c96}. Firstname |_{color: #506c96}. Lastname |_{color: #506c96}. Age |
+| Sean | Connery | 86 |
+| Geoge | Lazenby | 77 |
+| Roger | Moore | %{color: red}89 (RIP)% |
+| Timothy | Dalton | 71 |
+| Pierce | Brosnan | 64 |
+| Daniel | Craig | 49 |
+
+<br/>
+
+#3 By fetching the data from a yaml file and putting it in an html table
+
+<table>
+  <tr>
+    <th style="color: #506c96">Firstname</th>
+    <th style="color: #506c96">Lastname</th> 
+    <th style="color: #506c96">Age</th>
+  </tr>
+
+{% for actor in site.data.actors %}
+    <tr>
+        <td> {{ actor.firstname }} </td>
+        <td>{{ actor.lastname }} </td>
+        <td>{% if actor.age contains 'RIP' %} %{color: red}{{actor.age}}% {% else %} {{actor.age}} {% endif %} </td>
+    </tr>
+
+{% endfor %}
+
+</table>
+
+<br/>
+
+#4 By fetching the data from a yaml file building the table using Textile ==> %{color:red}Not working%
+
+|_{color: #506c96}. Firstname |_{color: #506c96}. Lastname |_{color: #506c96}. Age |
+{% for actor in site.data.actors %}
+
+    | {{ actor.firstname }} | {{ actor.lastname }} | {% if actor.age contains 'RIP' %} %{color: red}{{actor.age}}% {% else %} {{actor.age}} {% endif %} | <br />
+
+{% endfor %}
+
+<br/>
+
+#5 By fetching the data from a yaml file and listing it in bullet points
+
+h3. Bond Actors:
+{% for actor in site.data.actors %}
+
+    * {{ actor.firstname }} {{ actor.lastname }}, {% if actor.age contains 'RIP' %} %{color: red}{{actor.age}}% {% else %} {{actor.age}} {% endif %} years old<br />
+
+{% endfor %}

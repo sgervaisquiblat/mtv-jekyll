@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Textile Exemple"
-permalink: /Textile
+title:  "Textile Walkthrough"
+permalink: /textile
 ---
 
 h1. James Bond
